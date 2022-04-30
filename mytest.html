@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>counter</title>
+    <style type="text/css">
+        .blue {
+            font-size: 20px;
+            color: blue;
+        }
+        
+        .red {
+            font-size: 20px;
+            color: red;
+        }
+        
+        .green {
+            font-size: 20px;
+            color: green;
+        }
+        
+        .c1 {
+            color: orange;
+        }
+        
+        .c2 {
+            color: skyblue;
+        }
+        
+        .c3 {
+            color: magenta;
+        }
+        
+        body {
+            background-color: black;
+            background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+        }
+        
+        .qc {
+            color: skyblue;
+            text-decoration: underline;
+            text-align: left;
+        }
+        
+        .qc2 {
+            color: snow;
+            text-align: center;
+        }
+        
+        .yellow {
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="qc">视频车流量人工计数器</div>
+    <div class="red">左转车流计数</div>
+    <span id="demo1" class="yellow">0</span>
+    <span class="c1">小汽车</span>
+    <button id="btn1" onclick="add1()">+</button>
+    <button id="btn2" onclick="sub1()">-</button>
+    <button id="btn3" onclick="zero1()">0</button>
+    <br>
+    <span id="demo2" class="yellow">0</span>
+    <span class="c2">公交/客车</span>
+    <button id="btn1" onclick="add2()">+</button>
+    <button id="btn2" onclick="sub2()">-</button>
+    <button id="btn3" onclick="zero2()">0</button>
+    <br>
+    <span id="demo3" class="yellow">0</span>
+    <span class="c3">货车</span>
+    <button id="btn1" onclick="add3()">+</button>
+    <button id="btn2" onclick="sub3()">-</button>
+    <button id="btn3" onclick="zero3()">0</button>
+
+
+    <div class="green">直行车流计数</div>
+    <span id="demo4" class="yellow">0</span>
+    <span class="c1">小汽车</span>
+    <button id="btn1" onclick="add4()">+</button>
+    <button id="btn2" onclick="sub4()">-</button>
+    <button id="btn3" onclick="zero4()">0</button>
+    <br>
+    <span id="demo5" class="yellow">0</span>
+    <span class="c2">公交/客车</span>
+    <button id="btn1" onclick="add5()">+</button>
+    <button id="btn2" onclick="sub5()">-</button>
+    <button id="btn3" onclick="zero5()">0</button>
+    <br>
+    <span id="demo6" class="yellow">0</span>
+    <span class="c3">货车</span>
+    <button id="btn1" onclick="add6()">+</button>
+    <button id="btn2" onclick="sub6()">-</button>
+    <button id="btn3" onclick="zero6()">0</button>
+
+    <div class="blue">右转车流计数</div>
+    <span id="demo7" class="yellow">0</span>
+    <span class="c1">小汽车</span>
+    <button id="btn1" onclick="add7()">+</button>
+    <button id="btn2" onclick="sub7()">-</button>
+    <button id="btn3" onclick="zero7()">0</button>
+    <br>
+    <span id="demo8" class="yellow">0</span>
+    <span class="c2">公交/客车</span>
+    <button id="btn1" onclick="add8()">+</button>
+    <button id="btn2" onclick="sub8()">-</button>
+    <button id="btn3" onclick="zero8()">0</button>
+    <br>
+    <span id="demo9" class="yellow">0</span>
+    <span class="c3">货车</span>
+    <button id="btn1" onclick="add9()">+</button>
+    <button id="btn2" onclick="sub9()">-</button>
+    <button id="btn3" onclick="zero9()">0</button>
+    <br>
+    <strong class="qc2"> Made By  Q</strong>
+
+
+
+</body>
+
+<script type="text/javascript">
+    var counter1 = document.getElementById("demo1").innerHTML;
+    var counter2 = document.getElementById("demo2").innerHTML;
+    var counter3 = document.getElementById("demo3").innerHTML;
+    var counter4 = document.getElementById("demo4").innerHTML;
+    var counter5 = document.getElementById("demo5").innerHTML;
+    var counter6 = document.getElementById("demo6").innerHTML;
+    var counter7 = document.getElementById("demo7").innerHTML;
+    var counter8 = document.getElementById("demo8").innerHTML;
+    var counter9 = document.getElementById("demo9").innerHTML;
+    //左转
+    function add1() {
+        counter1++;
+        document.getElementById("demo1").innerHTML = counter1;
+    }
+
+    function sub1() {
+        if (counter1 == 0) {
+            counter1 = 0;
+        } else {
+            counter1--;
+            document.getElementById("demo1").innerHTML = counter1;
+        }
+    }
+
+    function zero1() {
+        counter1 = 0;
+        document.getElementById("demo1").innerHTML = counter1;
+    }
+
+
+    function add2() {
+        counter2++;
+        document.getElementById("demo2").innerHTML = counter2;
+    }
+
+    function sub2() {
+        if (counter2 == 0) {
+            counter2 = 0;
+        } else {
+            counter2--;
+            document.getElementById("demo2").innerHTML = counter2;
+        }
+    }
+
+    function zero2() {
+        counter2 = 0;
+        document.getElementById("demo2").innerHTML = counter2;
+    }
+
+    function add3() {
+        counter3++;
+        document.getElementById("demo3").innerHTML = counter3;
+    }
+
+    function sub3() {
+        if (counter3 == 0) {
+            counter3 = 0;
+        } else {
+            counter3--;
+            document.getElementById("demo3").innerHTML = counter3;
+        }
+    }
+
+    function zero3() {
+        counter3 = 0;
+        document.getElementById("demo3").innerHTML = counter3;
+    }
+    //直行
+    function add4() {
+        counter4++;
+        document.getElementById("demo4").innerHTML = counter4;
+    }
+
+    function sub4() {
+        if (counter4 == 0) {
+            counter4 = 0;
+        } else {
+            counter4--;
+            document.getElementById("demo4").innerHTML = counter4;
+        }
+    }
+
+    function zero4() {
+        counter4 = 0;
+        document.getElementById("demo4").innerHTML = counter4;
+    }
+
+
+    function add5() {
+        counter5++;
+        document.getElementById("demo5").innerHTML = counter5;
+    }
+
+    function sub5() {
+        if (counter5 == 0) {
+            counter5 = 0;
+        } else {
+            counter5--;
+            document.getElementById("demo5").innerHTML = counter5;
+        }
+    }
+
+    function zero5() {
+        counter5 = 0;
+        document.getElementById("demo5").innerHTML = counter5;
+    }
+
+    function add6() {
+        counter6++;
+        document.getElementById("demo6").innerHTML = counter6;
+    }
+
+    function sub6() {
+        if (counter6 == 0) {
+            counter6 = 0;
+        } else {
+            counter6--;
+            document.getElementById("demo6").innerHTML = counter6;
+        }
+    }
+
+    function zero6() {
+        counter6 = 0;
+        document.getElementById("demo6").innerHTML = counter6;
+    }
+
+    //右转
+
+    function add7() {
+        counter7++;
+        document.getElementById("demo7").innerHTML = counter7;
+    }
+
+    function sub7() {
+        if (counter7 == 0) {
+            counter7 = 0;
+        } else {
+            counter7--;
+            document.getElementById("demo7").innerHTML = counter7;
+        }
+    }
+
+    function zero7() {
+        counter7 = 0;
+        document.getElementById("demo7").innerHTML = counter7;
+    }
+
+
+    function add8() {
+        counter8++;
+        document.getElementById("demo8").innerHTML = counter8;
+    }
+
+    function sub8() {
+        if (counter8 == 0) {
+            counter8 = 0;
+        } else {
+            counter8--;
+            document.getElementById("demo8").innerHTML = counter8;
+        }
+    }
+
+    function zero8() {
+        counter8 = 0;
+        document.getElementById("demo8").innerHTML = counter8;
+    }
+
+    function add9() {
+        counter9++;
+        document.getElementById("demo9").innerHTML = counter9;
+    }
+
+    function sub9() {
+        if (counter9 == 0) {
+            counter9 = 0;
+        } else {
+            counter9--;
+            document.getElementById("demo9").innerHTML = counter9;
+        }
+    }
+
+    function zero9() {
+        counter9 = 0;
+        document.getElementById("demo9").innerHTML = counter9;
+    }
+</script>
+
+</html>
